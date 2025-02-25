@@ -1,0 +1,10 @@
+.wikitoolbar {
+	width: 100% !important;
+	border: none !important;
+}
+
+#checklists {
+	border: 1px solid silver;
+	margin-top: -0.25rem;
+	float: right;
+}

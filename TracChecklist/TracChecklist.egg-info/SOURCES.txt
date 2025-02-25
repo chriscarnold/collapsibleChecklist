@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+pyproject.toml
+setup.cfg
+setup.py
+checklist/__init__.py
+checklist/macros.py
+checklist/plugin.wk
+checklist/htdocs/checklist.css
+checklist/htdocs/checklist.png
+checklist/htdocs/menu.css
+checklist/htdocs/menu.js
+checklist/upgrades/__init__.py
+checklist/upgrades/db2.py

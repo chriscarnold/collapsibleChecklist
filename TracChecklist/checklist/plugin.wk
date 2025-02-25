@@ -1,0 +1,39 @@
+= TracChecklist Templates
+
+This page is the root for all checklist templates used by the {{{TracChecklist}}} plugin. It's location can be changed in {{{trac.ini}}} if desired. Each template page must include a header code, followed by a title, introductory notes, a horizontal line (four dashes), and then any collection of steps. Below is an example.
+
+{{{
+{{{#!newsbox
+= Checklist Template
+This is a checklist template, all content after the
+horizontal line is used. To create steps:
+
+{{{ [x] item text here \\ }}}
+
+The ending slashes are **required**; all other
+[[/wiki/WikiFormatting|WikiFormatting]] is supported.
+}}}
+
+
+= Bug Fix =
+
+Use this checklist for bugfix tickets. File locations starting with {{{\\git}}} refer
+to your local checkout of the projects git repository.
+
+----
+
+[x] Step one: understand the problem \\
+[x] Step two: document needed changes \\
+[x] etc ... \\
+
+}}}
+
+To use the template in a ticket, insert the corresponding macro code as shown below, or use the dropdown selector menu at the top-right of the ticket description edit box.
+
+{{{[[Checklist(ChecklistTemplates/Bugfix)]]}}}
+
+== Templates
+
+Note that you can create categories simply by changing the template name to include a "summary page" name which doesn't exist. The complete list of available templates is as follows:
+
+[[TitleIndex(TracChecklist/,format=hierarchy)]]
