@@ -1,0 +1,130 @@
+.checklist .source {
+  background: #cfffc1;
+  padding: 0.25rem;
+  clear: both;
+  border-top: 1px solid black;
+  margin-top: 3.0rem;
+}
+
+
+/*
+	custom checkbox styling
+	https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+
+*/
+
+.checklist .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checklist .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checklist .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checklist .container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a green background */
+.checklist .container input:checked~.checkmark {
+  background-color: #cfffc1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checklist .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checklist .container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checklist .container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* Styles for collapsible code blocks */
+.checklist .container.collapsible {
+  cursor: pointer;
+  position: relative;  /* Added for absolute positioning of triangle */
+  padding-right: 20px; /* Make room for triangle */
+}
+
+.checklist .container.collapsible pre {
+  display: none;
+  margin-top: 10px;
+  margin-left: -35px;  /* Align with text */
+  padding: 10px;
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+}
+
+.checklist .container.collapsible.active pre {
+  display: block;
+}
+
+/* Arrow indicator for collapsible sections */
+.checklist .container.collapsible:after {
+  content: '◀';  /* Left-pointing triangle */
+  position: absolute;
+  top: 2px;     /* Align with first line of text */
+  right: 0;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.checklist .container.collapsible.active:after {
+  transform: rotate(270deg);  /* Rotate to down-pointing triangle */
+}
+
+/* Prevent text selection when clicking to collapse */
+.checklist .container.collapsible .step-content {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection within code blocks */
+.checklist .container.collapsible pre {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
